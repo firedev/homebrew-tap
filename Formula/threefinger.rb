@@ -1,5 +1,5 @@
 class Threefinger < Formula
-  desc "Three-finger swipe on the Mac trackpad → switch tabs"
+  desc "Swipe with three fingers on the Mac trackpad to change tabs"
   homepage "https://github.com/firedev/threefinger"
   url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.3.tar.gz"
   sha256 "6fa0ee798c657f3659e1bb205d6d751572114089a13f5e627c8ad7f0e94f6a04"
@@ -31,7 +31,7 @@ class Threefinger < Formula
         Swipe between full-screen applications  → Swipe Left or Right with Four Fingers
         Swipe between pages                     → Off  (optional)
 
-      Then three fingers left/right switch tabs.
+      Then three fingers left/right change tabs.
       Optional: keep Mission Control / App Exposé on three fingers (↑ all windows · ↓ this app).
       Config:  ~/.config/threefinger.json
     EOS
