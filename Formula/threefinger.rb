@@ -1,8 +1,8 @@
 class Threefinger < Formula
   desc "Three-finger horizontal trackpad swipe to any keyboard shortcut"
   homepage "https://github.com/firedev/threefinger"
-  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "a9265b81d524c19ac856daf4ec06240ee5becdedf010f460b566fa41fefdc4aa"
+  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.2.tar.gz"
+  sha256 "1bab60168fabaaa414d9d09460757910224bbfb49884dea5cd40418712a1937d"
   license "MIT"
 
   depends_on :macos
