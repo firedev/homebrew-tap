@@ -1,8 +1,8 @@
 class Threefinger < Formula
   desc "Three-finger swipe on the Mac trackpad → switch tabs"
   homepage "https://github.com/firedev/threefinger"
-  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.2.tar.gz"
-  sha256 "1bab60168fabaaa414d9d09460757910224bbfb49884dea5cd40418712a1937d"
+  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "6fa0ee798c657f3659e1bb205d6d751572114089a13f5e627c8ad7f0e94f6a04"
   license "MIT"
 
   depends_on :macos
