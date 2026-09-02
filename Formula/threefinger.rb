@@ -28,8 +28,11 @@ class Threefinger < Formula
       (after every upgrade: remove (−) first, then re-add; toggling is not enough)
 
       --check --open lands on Trackpad → More Gestures (needs Accessibility). Then:
-        Swipe between full-screen applications  → Swipe Left or Right with Four Fingers  (required)
-        Swipe between pages                     → Off  (optional, recommended)
+        Swipe between full-screen applications  → Swipe Left or Right with Four Fingers
+        Keep Mission Control / App Exposé on three fingers
+        Swipe between pages                     → Off  (optional)
+
+      Three fingers: ↑ all windows · ↓ this app · ←/→ tabs
 
       Default: 3-finger swipe ←/→ switches tabs (Ctrl-Shift-Tab / Ctrl-Tab)
       Config:  ~/.config/threefinger.json
