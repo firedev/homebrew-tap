@@ -1,8 +1,8 @@
 class Threefinger < Formula
   desc "Three-finger horizontal trackpad swipe to any keyboard shortcut"
   homepage "https://github.com/firedev/threefinger"
-  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "d712f46bb78024660790c41683f2805828108f4855017b49577fe245d04d9dfe"
+  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "d9195e0a58f6403d09e952a423487f1f4d4bd6dadf15424a22f7f2eda0c6db0f"
   license "MIT"
 
   depends_on :macos
@@ -19,17 +19,20 @@ class Threefinger < Formula
 
   def caveats
     <<~EOS
-      Start the daemon:
+      Start the daemon, then check permissions (opens Settings if anything is missing):
         brew services start threefinger
+        #{opt_bin}/threefinger --check --open
 
-      Grant Accessibility to the BINARY itself (not your terminal):
-        System Settings → Privacy & Security → Accessibility → + →
+      If Accessibility / Input Monitoring is MISSING — add:
         #{opt_bin}/threefinger
-      Without it, swipes are detected but keys silently don't post.
-      After every upgrade the binary changes — remove (−) and re-add it there.
+      (after every upgrade: remove (−) first, then re-add; toggling is not enough)
 
-      macOS's own 3-finger gestures grab the same swipes:
-        System Settings → Trackpad → More Gestures → set to four fingers or off.
+      --check --open lands on Trackpad → More Gestures (needs Accessibility). Then:
+        Swipe between pages                     → Off
+        Swipe between full-screen applications  → Swipe Left or Right with Four Fingers
+
+      Default: 3-finger swipe ←/→ switches tabs (⌃⇧Tab / ⌃Tab)
+      Config:  ~/.config/threefinger.json
     EOS
   end
 
