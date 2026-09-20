@@ -29,9 +29,9 @@ class Threefinger < Formula
       Then three fingers left/right change tabs.
       Optional: keep Mission Control / App Exposé on three fingers.
 
-      After upgrades: remove (−) and re-add Accessibility for the new binary,
-      then brew services restart threefinger. A grant does not apply to a
-      daemon that is already running.
+      After upgrades: brew services restart threefinger. The daemon asks for
+      Accessibility itself — approve the dialog. If an old entry for a previous
+      binary is still listed, remove it (−); it no longer grants anything.
       Config: ~/.config/threefinger.json
     EOS
   end
