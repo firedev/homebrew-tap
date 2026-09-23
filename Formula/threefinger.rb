@@ -23,15 +23,16 @@ class Threefinger < Formula
       #{opt_bin}/threefinger --check --open
 
       Allow Accessibility (Device Control and Data Access) + Input Monitoring for threefinger (not Terminal).
-      Trackpad → More Gestures → Swipe between full-screen applications
-        → Swipe Left or Right with Four Fingers
+      Trackpad → More Gestures → move system swipes to four fingers:
+        Mission Control → Swipe Up with Four Fingers
+        App Exposé → Swipe Down with Four Fingers
+        Swipe between full-screen applications → Swipe Left or Right with Four Fingers
 
       Then three fingers left/right change tabs.
-      Optional: keep Mission Control / App Exposé on three fingers.
 
-      After upgrades: brew services restart threefinger. The daemon asks for
-      Accessibility itself — approve the dialog. If an old entry for a previous
-      binary is still listed, remove it (−); it no longer grants anything.
+      After upgrades the old Accessibility entry is stale even if it shows on
+      (Homebrew builds are ad-hoc signed): remove it (−), then + the binary.
+      The daemon restarts itself once granted.
       Config: ~/.config/threefinger.json
     EOS
   end
