@@ -1,8 +1,8 @@
 class Threefinger < Formula
   desc "Swipe with three fingers on the Mac trackpad to change tabs"
   homepage "https://github.com/firedev/threefinger"
-  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.1.8.tar.gz"
-  sha256 "af8030d7ceaf7648f1de01c080940553f2b09328bf2c2946d0318d1f5c4dd658"
+  url "https://github.com/firedev/threefinger/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "fbf745af13a00966e6ebb3854b0567007246160e87bf5bb3a139bd1ac5a6a0a6"
   license "MIT"
 
   depends_on :macos
@@ -22,7 +22,7 @@ class Threefinger < Formula
       brew services start threefinger
       #{opt_bin}/threefinger --check --open
 
-      Allow Accessibility + Input Monitoring for threefinger (not Terminal).
+      Allow Accessibility (Device Control and Data Access) + Input Monitoring for threefinger (not Terminal).
       Trackpad → More Gestures → Swipe between full-screen applications
         → Swipe Left or Right with Four Fingers
 
